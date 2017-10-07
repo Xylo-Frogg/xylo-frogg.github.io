@@ -1,17 +1,26 @@
-import page from 'page';
+import Navigo from 'navigo';
 
 require('../scss/main.scss');
 
-page('/', function(){
-  console.log('index');
-});
+var root = null;
+var useHash = true; // Defaults to: false
+var hash = '#'; // Defaults to: '#'
+var router = new Navigo(root, useHash, hash);
 
-page('/foo', function(){
-  console.log('foo');
-});
+router
+  .on('/', function(){
+    console.log('/index')
+  })
+  .resolve();
 
-page('/foo/:bar', function(context){
-  console.log(':bar', context);
-});
+router
+  .on('/foo', function(){
+    console.log('/foo')
+  })
+  .resolve();
 
-page();
+  router
+    .on('/foo/:bar', function(params){
+      console.log('/:bar', params);
+    })
+    .resolve();

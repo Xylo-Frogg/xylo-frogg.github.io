@@ -13,9 +13,10 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "npm run build",
-    "serve": "node webpack/webpack.dev-server.js",
+    "serve": "http-server docs/dist/ --cors --silent -o -c-1",
     "build": "webpack --colors --display-modules --debug --config webpack/webpack.config.js",
-    "watch": "node webpack/webpack.dev-server.js"
+    "watch": "npm run build -- --watch",
+    "watch2": "node webpack/webpack.dev-server.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -47,6 +48,7 @@
     "handlebars": "^4.0.6",
     "jquery": "^3.1.1",
     "js-md5": "^0.4.1",
+    "navigo": "^5.3.2",
     "page": "^1.7.1",
     "popper.js": "^1.12.5",
     "underscore": "^1.8.3"

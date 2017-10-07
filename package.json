@@ -1,0 +1,60 @@
+{
+  "name": "thetracker",
+  "version": "1.0.0",
+  "author": "rene.vanschendel@gmail.com",
+  "description": "Simple Destiny PVP/PVE Tracker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Xylo-Frogg/xylo-frogg.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/Xylo-Frogg/xylo-frogg.github.io/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "npm run build",
+    "serve": "node webpack/webpack.dev-server.js",
+    "build": "webpack --colors --display-modules --debug --config webpack/webpack.config.js",
+    "watch": "node webpack/webpack.dev-server.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "classie": "^1.0.0",
+    "copy-webpack-plugin": "^4.1.0",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^1.1.5",
+    "handlebars-loader": "^1.6.0",
+    "hbsfy": "^2.7.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-svgstore-plugin": "^4.0.1",
+    "write-file-webpack-plugin": "^4.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "browserify": "^13.1.1",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "handlebars": "^4.0.6",
+    "jquery": "^3.1.1",
+    "js-md5": "^0.4.1",
+    "path-to-regexp": "^2.0.0",
+    "popper.js": "^1.12.5",
+    "underscore": "^1.8.3"
+  },
+  "config": {
+    "entry": "./docs/src/js/main.js",
+    "cssentry": "./docs/src/scss/main.scss",
+    "sourcefolder": "./docs/src",
+    "distfolder": "./docs/dist"
+  }
+}

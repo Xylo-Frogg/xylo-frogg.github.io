@@ -23,7 +23,7 @@ var server = new WebpackDevServer(compiler, {
   clientLogLevel: 'warning',
   compress: false,
   port: port,
-  inline: true,
+  inline: false,
   historyApiFallback: true,
   stats: {
     colors: true

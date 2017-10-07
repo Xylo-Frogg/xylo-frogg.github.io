@@ -1,8 +1,17 @@
-import API from './api.js';
+import page from 'page';
 
-API.get('/', function(req){
-  console.log('xxxxxxx');
+require('../scss/main.scss');
+
+page('/', function(){
+  console.log('index');
 });
-API.get('/foo', function(req){
-  console.log('foo', req);
+
+page('/foo', function(){
+  console.log('foo');
 });
+
+page('/foo/:bar', function(context){
+  console.log(':bar', context);
+});
+
+page();
